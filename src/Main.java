@@ -35,21 +35,37 @@ public class Main {
 
         //Exercici 4
 
-        System.out.println("Dame un texto:");
+        System.out.println("Dona'm un text:");
         String textazo = Lecture.nextLine();
 
         if (textazo.isEmpty()) {
-            System.out.println("El texto está vacío. Fin del programa.");
+            System.out.println("El text està buit. Fi del programa.");
         } else {
-            System.out.println("Dame una palabra a buscar:");
+            System.out.println("Dona'm una paraula a trobar:");
             String palabra = Lecture.nextLine();
 
             if (textazo.contains(palabra)) {
-                System.out.println("La palabra \"" + palabra + "\" se ha localizado en el texto.");
+                System.out.println("La paraula '" + palabra + "' s'ha localitzat al text.");
             } else {
-                System.out.println("La palabra \"" + palabra + "\" NO se ha localizado en el texto.");
+                System.out.println("La paraula '" + palabra + "' NO s'ha localitzat al text.");
             }
         }
-    }
 
+        //Exercici 5 Tasca 1
+
+        String[] catalogo = {"Los muertos vivientes", "Brevísima historia del tiempo", "La clave secreta del universo","Mi universo", "Patria", "De mayor quiero ser feliz", "Empieza por los zapatos"};
+                //Insert code here
+        System.out.println("Què llibre estàs buscant?");
+        String llibre = Lecture.nextLine();
+
+        String resultat = "El llibre no està a la biblioteca";
+
+        for (int i = 0; i < catalogo.length; i++) {
+            if (catalogo[i].equalsIgnoreCase(llibre)) {
+                resultat = "El llibre està a la biblioteca";
+            }
+        }
+        System.out.println(resultat);
+
+        }
 }
